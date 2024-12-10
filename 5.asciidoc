@@ -1,0 +1,32 @@
++*In[1]:*+
+[source, ipython3]
+----
+class A:
+    def show(self):
+        print("This is from class A")
+class B(A):
+    def show(self):
+        print("This is from class B")
+class C(A):
+    def show(self):
+        print("This is from class C")
+class D(B,C):
+    pass
+d=D()
+d.show()
+print(D.mro())
+----
+
+
++*Out[1]:*+
+----
+This is from class B
+[<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
