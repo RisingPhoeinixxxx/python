@@ -1,0 +1,39 @@
++*In[1]:*+
+[source, ipython3]
+----
+string=input("Enter a string:")
+words=string.split()
+def create_dictionary(words):
+    dictionary={}
+    for word in words:
+        if word:
+            first_character=word[0].upper()
+            if first_character not in dictionary:
+                dictionary[first_character]=[]
+            dictionary[first_character].append(word)
+    return dictionary
+result=create_dictionary(words)
+for key,value in sorted(result.items()):
+    print(f"'{key}':{value}")
+----
+
+
++*Out[1]:*+
+----
+Enter a string:Hey Hello Hi
+'H':['Hey', 'Hello', 'Hi']
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
